@@ -1,52 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  <!-- Sign-up form start -->
-
-  Stay updated!
-
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body>
+    <main>
+      <section
+        class="newsletter"
+        aria-labelledby="newsletter-title"
+        aria-describedby="newsletter-description"
+      >
+        <div class="newsletter__content">
+          <header class="newsletter__header">
+            <h1 class="newsletter__title" id="newsletter-title">
+              Stay updated!
+            </h1>
+            <p class="newsletter__description" id="newsletter-description">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+            <ul class="newsletter__list">
+              <li class="newsletter__item">
+                Product discovery and building what matters
+              </li>
+              <li class="newsletter__item">
+                Measuring to ensure updates are a success
+              </li>
+              <li class="newsletter__item">And much more!</li>
+            </ul>
+          </header>
+          <form
+            class="newsletter-form"
+            aria-labelledby="newsletter-title"
+            novalidate
+          >
+            <fieldset class="newsletter-form__field">
+              <div class="newsletter-form__field-group">
+                <label class="newsletter-form__label" for="email"
+                  >Email address</label
+                >
+                <span
+                  class="newsletter-form__error"
+                  id="email-error"
+                  aria-live="polite"
+                ></span>
+              </div>
+              <input
+                class="newsletter-form__input"
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="email@company.com"
+                aria-describedby="email-error"
+                required
+              />
+            </fieldset>
+            <button class="newsletter-form__button" type="submit">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+        <div class="newsletter__image-wrapper">
+          <picture>
+            <source
+              media="(min-width: 1024px)"
+              srcset="./assets/images/illustration-sign-up-desktop.svg"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="./assets/images/illustration-sign-up-tablet.svg"
+            />
+            <img
+              src="./assets/images/illustration-sign-up-mobile.svg"
+              alt="Illustration showing newsletter statistics"
+            />
+          </picture>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
