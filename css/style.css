@@ -1,0 +1,67 @@
+/* RESET */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* VARIABLES */
+:root {
+  --red: hsl(4, 100%, 67%);
+  --blue-800: hsl(234, 29%, 20%);
+  --blue-700: hsl(235, 18%, 26%);
+  --grey: hsl(0, 0%, 58%);
+  --white: hsl(0, 0%, 100%);
+  --gradient: linear-gradient(90deg, #ff6a3a 0%, #ff527b 100%);
+
+  --ff-base: "Roboto", sans-serif;
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+/* BASE */
+body {
+  font-family: var(--ff-base);
+  font-size: 1rem;
+  font-weight: var(--fw-400);
+  color: var(--blue-800);
+  background-color: var(--blue-700);
+}
+
+main {
+  min-height: 100vh;
+}

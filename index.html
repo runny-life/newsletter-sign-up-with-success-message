@@ -9,6 +9,7 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
@@ -43,7 +44,7 @@
             aria-labelledby="newsletter-title"
             novalidate
           >
-            <fieldset class="newsletter-form__field">
+            <div class="newsletter-form__field">
               <div class="newsletter-form__field-group">
                 <label class="newsletter-form__label" for="email"
                   >Email address</label
@@ -64,7 +65,7 @@
                 aria-describedby="email-error"
                 required
               />
-            </fieldset>
+            </div>
             <button class="newsletter-form__button" type="submit">
               Subscribe to monthly newsletter
             </button>
@@ -83,9 +84,33 @@
             <img
               src="./assets/images/illustration-sign-up-mobile.svg"
               alt="Illustration showing newsletter statistics"
+              width="375"
+              height="284"
             />
           </picture>
         </div>
+      </section>
+      <section
+        class="success"
+        aria-labelledby="success-title"
+        aria-describedby="success-description"
+        hidden
+      >
+        <img
+          src="./assets/images/icon-success.svg"
+          alt=""
+          width="64"
+          height="64"
+        />
+        <h2 class="success__title" id="success-title">
+          Thanks for subscribing!
+        </h2>
+        <p class="success__description" id="success-description">
+          A confirmation email has been sent to
+          <strong id="user-email"></strong>. Please open it and click the button
+          inside to confirm your subscription.
+        </p>
+        <button class="success__button" type="button">Dismiss message</button>
       </section>
     </main>
   </body>
