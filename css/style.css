@@ -76,6 +76,7 @@ main {
 
 .newsletter__image-wrapper {
   order: -1;
+  overflow: hidden;
 }
 
 .newsletter__image-wrapper img {
@@ -89,4 +90,37 @@ main {
   flex-direction: column;
   row-gap: 2.5rem;
   padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  main {
+    display: grid;
+    place-items: center;
+    background-color: var(--blue-700);
+    padding: 2rem;
+  }
+
+  .newsletter {
+    padding: 2.5rem;
+    border-radius: 36px;
+  }
+
+  .newsletter__content {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .newsletter {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4rem;
+    align-items: center;
+    max-width: 56.5rem;
+    padding: 2rem;
+  }
+
+  .newsletter__image-wrapper {
+    order: initial;
+  }
 }
