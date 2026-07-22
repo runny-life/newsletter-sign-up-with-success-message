@@ -94,7 +94,7 @@ main {
 
 .newsletter__header {
   display: grid;
-  gap: 1.5rem;
+  gap: clamp(1.5rem, 0rem + 3.125vw, 2rem);
 }
 
 .newsletter__list {
@@ -133,6 +133,7 @@ main {
 
   .newsletter__content {
     padding: 0;
+    row-gap: clamp(1.5rem, 0rem + 3.125vw, 2rem);
   }
 }
 
