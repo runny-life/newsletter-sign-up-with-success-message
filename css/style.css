@@ -92,6 +92,32 @@ main {
   padding-inline: 1.5rem;
 }
 
+.newsletter__header {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.newsletter__list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.newsletter__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 1rem;
+}
+
+.newsletter__item::before {
+  content: "";
+  width: 1.313rem;
+  height: 1.313rem;
+  background-image: url("../assets/images/icon-list.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 @media (min-width: 768px) {
   main {
     display: grid;
