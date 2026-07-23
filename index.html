@@ -15,11 +15,12 @@
     </title>
   </head>
   <body class="text-preset-2">
-    <main>
+    <main data-js-root>
       <section
         class="newsletter"
         aria-labelledby="newsletter-title"
         aria-describedby="newsletter-description"
+        data-js-newsletter
       >
         <div class="newsletter__content">
           <header class="newsletter__header">
@@ -43,6 +44,7 @@
             class="newsletter-form"
             aria-labelledby="newsletter-title"
             novalidate
+            data-js-newsletter-form
           >
             <div class="newsletter-form__field">
               <div class="newsletter-form__field-group">
@@ -53,6 +55,7 @@
                   class="newsletter-form__error text-preset-3"
                   id="email-error"
                   aria-live="polite"
+                  data-js-newsletter-error
                 ></span>
               </div>
               <input
@@ -64,6 +67,7 @@
                 placeholder="email@company.com"
                 aria-describedby="email-error"
                 required
+                data-js-newsletter-email
               />
             </div>
             <button
@@ -97,6 +101,7 @@
         class="success"
         aria-labelledby="success-title"
         aria-describedby="success-description"
+        data-js-success
         hidden
       >
         <img
@@ -105,21 +110,32 @@
           width="64"
           height="64"
         />
-        <h2 class="success__title text-preset-1" id="success-title">
+        <h2
+          class="success__title text-preset-1"
+          id="success-title"
+          data-js-success-title
+        >
           Thanks for subscribing!
         </h2>
         <p class="success__description" id="success-description">
           A confirmation email has been sent to
-          <strong id="user-email"></strong>. Please open it and click the button
-          inside to confirm your subscription.
+          <strong
+            class="text-preset-2 text-preset-2--bold"
+            id="user-email"
+            data-js-success-email
+          ></strong
+          >. Please open it and click the button inside to confirm your
+          subscription.
         </p>
         <button
           class="success__button text-preset-2 text-preset-2--bold"
           type="button"
+          data-success-dismiss
         >
           Dismiss message
         </button>
       </section>
     </main>
+    <script src="./scripts/app.js"></script>
   </body>
 </html>
