@@ -248,6 +248,30 @@ main {
   }
 }
 
+/* Typography */
+
+.text-preset-1 {
+  font-weight: var(--fw-700);
+  font-size: clamp(2.5rem, 1.546rem + 4.071vw, 3.5rem);
+  line-height: 1;
+}
+
+.text-preset-2 {
+  font-weight: var(--fw-400);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.text-preset-2--bold {
+  font-weight: var(--fw-700);
+}
+
+.text-preset-3 {
+  font-weight: var(--fw-700);
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+}
+
 @media (min-width: 1024px) {
   .newsletter:not([hidden]) {
     display: grid;

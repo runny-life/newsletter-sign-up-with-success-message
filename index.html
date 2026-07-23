@@ -14,7 +14,7 @@
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
   </head>
-  <body>
+  <body class="text-preset-2">
     <main>
       <section
         class="newsletter"
@@ -23,7 +23,7 @@
       >
         <div class="newsletter__content">
           <header class="newsletter__header">
-            <h1 class="newsletter__title" id="newsletter-title">
+            <h1 class="newsletter__title text-preset-1" id="newsletter-title">
               Stay updated!
             </h1>
             <p class="newsletter__description" id="newsletter-description">
@@ -46,11 +46,11 @@
           >
             <div class="newsletter-form__field">
               <div class="newsletter-form__field-group">
-                <label class="newsletter-form__label" for="email"
+                <label class="newsletter-form__label text-preset-3" for="email"
                   >Email address</label
                 >
                 <span
-                  class="newsletter-form__error"
+                  class="newsletter-form__error text-preset-3"
                   id="email-error"
                   aria-live="polite"
                 ></span>
@@ -66,7 +66,10 @@
                 required
               />
             </div>
-            <button class="newsletter-form__button" type="submit">
+            <button
+              class="newsletter-form__button text-preset-2 text-preset-2--bold"
+              type="submit"
+            >
               Subscribe to monthly newsletter
             </button>
           </form>
@@ -102,7 +105,7 @@
           width="64"
           height="64"
         />
-        <h2 class="success__title" id="success-title">
+        <h2 class="success__title text-preset-1" id="success-title">
           Thanks for subscribing!
         </h2>
         <p class="success__description" id="success-description">
@@ -110,7 +113,12 @@
           <strong id="user-email"></strong>. Please open it and click the button
           inside to confirm your subscription.
         </p>
-        <button class="success__button" type="button">Dismiss message</button>
+        <button
+          class="success__button text-preset-2 text-preset-2--bold"
+          type="button"
+        >
+          Dismiss message
+        </button>
       </section>
     </main>
   </body>
